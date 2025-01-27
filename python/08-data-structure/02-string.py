@@ -4,7 +4,7 @@ print(text.find('a')) #1
 print(text.find('z')) #-1
 
 # index
-print(text.index('a')) #q
+print(text.index('a')) #1
 # print(text.index('z')) #ValueError: substring not found
 
 
