@@ -38,9 +38,9 @@ print(text) #Hello, world! world world #원본은 불면 #문자열은 불변
 # strip
 text = '  Hello, world!  '
 new_text = text.strip()
-new_text1 = text.strip('Hello')
+new_text1 = text.strip('world') # 모르겠ㄷ음
 print(new_text) #Hello, world!
-print(new_text1)
+print(new_text1) # ???? 
 
 # split
 text = 'Hello, world!'
