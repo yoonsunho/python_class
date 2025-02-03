@@ -1,9 +1,9 @@
 class Circle:
 
-    #클래스 변수
+    #클래스 변수(설계도 변수) => 모든 인스턴스가 공유
     pi=3.14
     
-    #생성자 메서드
+    #생성자 메서드 #인스턴스 생성시 자동으로 생성 #변수할당, 초기화 담당
     def __init__(self, radius):
         self.radius = radius
         
