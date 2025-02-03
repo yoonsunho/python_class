@@ -3,17 +3,20 @@ a="123"
 b=a
 a=a.replace("1","9")
 c =a.replace("1","9")
-print(a)
-print(c)
+print(a) #923 #a의 값이 123에서 923으로 변경된것이 아니라,a가 참조하는 문자열이 "123"에서 "923" 으로 바뀐것임
+print(c) #923
+print(b) #123
+print(a==b) #False
+print(a is b) #False
 
 a1=[1,2,3,4]  #주소값 1000,1008,1016,1024라 가정
 b1=a1
 a1[1]=10  #주소값 1008이 2가 아닌 10을 가리키게 바꿔주는거임
-print(id(a1))
-print(id(b1))
+print(id(a1)) #2359902829504 
+print(id(b1)) #2359902829504
 
-print(a1)
-print(b1)
+print(a1) #[1, 10, 3, 4]
+print(b1) #[1, 10, 3, 4]
 
 #깊은복사
 d=[1,2,3,4]
