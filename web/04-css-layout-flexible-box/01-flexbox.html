@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      height: 500px;
+      border: 1px solid black;
+      /* 쌓이는 방향 주 축 기준으로 바뀜 */
+      /* flex item은 교차 축의 크기를 채우기 위해 늘어남(길어짐) */
+      display: flex;
+      /* 메인축(주 축)을 row로 하겠다 */
+      flex-direction: row;
+      /* 메인 축을 column으로 하겠단 의미 */
+      /* flex-direction: column; */
+      /* 열의 오른쪽부터 역순으로 정렬 */
+      /* flex-direction: row-reverse; */
+      /* 행의 아래부터 역순으로 정렬 */
+      /* flex-direction: column-reverse; */
+
+      /* flex-wrap: nowrap; */
+      /* 칸 줄이면 아래로 이동 */
+      flex-wrap: wrap;
+
+      /* justify-content: flex-start; */
+      /* 열 가운데 정렬 */
+      /* justify-content: center; */
+      /* 오른정렬  */
+      /* justify-content: flex-end; */
+
+      /* flew-wrap과 같이 작용 */
+      /* 압축된 상태로 이동 */
+      /* align-content: flex-start; */
+      /* align-content: center; */
+      /* align-content: flex-end; */
+
+      /* align-items: flex-start; */
+      /* 행 가운데 정렬 */
+      /* align-items: center; */
+      /* align-items: flex-end; */
+    }
+
+    .post {
+      background-color: grey;
+      border: 1px solid black;
+      margin: 0.5rem;
+      padding: 0.5rem;
+    }
+
+    .item1 {
+      align-self: center;
+    }
+
+    .item2 {
+      align-self: flex-end;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="post item1">
+      <h2>Post Title 1</h2>
+      <p>Post Content 1</p>
+    </div>
+    <div class="post item2">
+      <h2>Post Title 2</h2>
+      <p>Post Content 2</p>
+    </div>
+    <div class="post item3">
+      <h2>Post Title 3</h2>
+      <p>Post Content 3</p>
+    </div>
+    <div class="post item4">
+      <h2>Post Title 4</h2>
+      <p>Post Content 4</p>
+    </div>
+  </div>
+
+</body>
+
+</html>

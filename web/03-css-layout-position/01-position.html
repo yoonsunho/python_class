@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 1500px;
+    }
+
+    .container {
+      /* contatiner에 relative 주면 absolute가 container 기준으로 따라가면서 위치가 조정됨 */
+      /* absolute는 가장 가까운 relative부모 요소를 기준으로 이동 */
+      position: relative;
+      height: 300px;
+      width: 300px;
+      border: 1px solid black;
+    }
+
+    .box {
+      height: 100px;
+      width: 100px;
+      border: 1px solid black;
+    }
+
+    .static {
+      /* position: static; */
+      background-color: lightcoral;
+    }
+
+    .absolute {
+      /* 본인의 영역을 버린다.. 빈공간이 됨(집나감) */
+      /* 아래의 static이 올라가며 아래의 박스들 이동에도 영향을 줌.. 아래있는 박스들이 위로 치고 올라옴
+      (원래 absolute위치가 버려짐으로써 그곳이 relative의 static위 치가 되고 그래서 relative의 이동에 변화가 생김) */
+      position: absolute;
+      background-color: lightgreen;
+      top: 100px;
+      left: 100px;
+    }
+
+    .relative {
+      /* 본인의 static일 때 위치 기준으로(상대위치) */
+      position: relative;
+      background-color: lightblue;
+      /* top 100 => 아래로 이동 */
+      top: 100px;
+      /* left 100 =>오른쪽으로 이동 */
+      left: 100px;
+    }
+
+    .fixed {
+      /* 스크롤 내려도 계속 고정위치에 존재함 */
+      position: fixed;
+      background-color: gray;
+      /* 우측 상단으로 이동 */
+      top: 0;
+      right: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box static">Static</div>
+    <div class="box absolute">Absolute</div>
+    <div class="box relative">Relative</div>
+    <div class="box fixed">Fixed</div>
+  </div>
+</body>
+
+</html>
